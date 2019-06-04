@@ -1,0 +1,1 @@
+startOver = "body > main > div:nth-child(2) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div:nth-child(3) > div > div > div > div.borrow__result.text--white.clearfix > div.box--right > button"
