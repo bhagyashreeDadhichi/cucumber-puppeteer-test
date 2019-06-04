@@ -1,15 +1,15 @@
 Feature: Page
   In order to get things done
-  As I user
-  I want to manage my todos
+  As Person user
+  Person want to manage todos
 
    Scenario: access the anz home page
-    Given I access the application "home" page
-    When I check the element exist
-    And I enter the provided value in the respective column
-    When I check the total estimate value "$459,000"
+    Given Person access the application "home" page
+    When Person check the element exist
+    And Person enter the provided value in the respective column
+    When Person check the total estimate value "$459,000"
     Then reset the column
-    When I enter only $1 for leaving expense
-    Then I get the text displayed
+    When Person enter only $1 for leaving expense
+    Then Person get the text displayed
 
   

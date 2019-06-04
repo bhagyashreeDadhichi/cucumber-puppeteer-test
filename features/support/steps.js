@@ -11,11 +11,11 @@ After(async function() {
   return await this.closeTodoPage();
 });
 
-Given("I access the application {string} page", async function(page) {
+Given("Person access the application {string} page", async function(page) {
   await this.attachScreenshot(page);
 });
 
-When("I check the element exist", async function() {
+When("Person check the element exist", async function() {
   //check the single 
   await this.checkElementExist("body > main > div:nth-child(2) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div.container__main.borrow--homeloan > div > div:nth-child(1) > div > div:nth-child(2) > ul > li");
   //check the income element
@@ -32,11 +32,11 @@ When("I check the element exist", async function() {
  await this.checkElementExist("#credit");
 });
 
-When("I click enter", async function() {
+When("Person click enter", async function() {
   return await this.submit();
 });
 
-Then("I enter the provided value in the respective column", async function() {
+Then("Person enter the provided value in the respective column", async function() {
   await this.clickElement("body > main > div:nth-child(2) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div.container__main.borrow--homeloan > div > div:nth-child(1) > div > div:nth-child(2) > ul > li");
   //enter income value $80000
   await this.enterTextBox("body > main > div:nth-child(2) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div.container__main.borrow--homeloan > div > div:nth-child(2) > div > div:nth-child(2) > div > input[type=text]","80000");
@@ -53,7 +53,7 @@ Then("I enter the provided value in the respective column", async function() {
 await this.attachScreenshot("form_full");
 });
 
-When("I check the total estimate value {string}",async function(value){
+When("Person check the total estimate value {string}",async function(value){
 await this.checkElementValue("body > main > div:nth-child(2) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div:nth-child(3) > div > div > div > div.borrow__result.text--white.clearfix > div.box--left > span.borrow__result__text > span",value);
 await this.attachScreenshot("total_estimates");
 });
@@ -63,7 +63,7 @@ Then("reset the column",async function(){
 
 });
 
-When("I enter only $1 for leaving expense",async function(){
+When("Person enter only $1 for leaving expense",async function(){
   await this.clickElement("body > main > div:nth-child(2) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div.container__main.borrow--homeloan > div > div:nth-child(1) > div > div:nth-child(2) > ul > li");
   //enter income value $80000
   await this.enterTextBox("body > main > div:nth-child(2) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div.container__main.borrow--homeloan > div > div:nth-child(2) > div > div:nth-child(2) > div > input[type=text]","0");
@@ -80,7 +80,7 @@ When("I enter only $1 for leaving expense",async function(){
 await this.attachScreenshot("oneDollor_livingExpense");
 });
 
-Then("I get the text displayed",async function(){
+Then("Person get the text displayed",async function(){
   await this.checkElementValue("body > main > div:nth-child(2) > div > div > div.clearfix > div > div > div > div > div.container.container--four.box--white > div > div:nth-child(3) > div > div > div > div.borrow__error.text--white.clearfix > div.box--left.text--center > span",
   `Based on the details you've entered, we're unable to give you an estimate of your borrowing power with this calculator. For questions, call us on 1800 100 641.`);
   await this.attachScreenshot("UnableToEstimate");
